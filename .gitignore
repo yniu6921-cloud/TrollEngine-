@@ -1,3 +1,14 @@
+# 敏感文件 — 别他妈再上传了
+验证/
+新数据/
+clawgod/
+license-platform/
+真后台/
+真后台_副本/
+UDID/
+CNAME
+*.DS_Store
+
 .cache/
 .theos/
 packages/
