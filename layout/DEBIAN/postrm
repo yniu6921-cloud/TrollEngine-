@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+[ -f "/var/jb/usr/bin/killall" ] && KILL_CMD="/var/jb/usr/bin/killall" || KILL_CMD="killall"
+
+$KILL_CMD -9 SpringBoard >/dev/null 2>&1 || true

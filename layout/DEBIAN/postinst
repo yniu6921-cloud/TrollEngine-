@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+[ "$1" = "configure" ] || exit 0
+
+uicache -p /var/jb/Applications/YuanBao.app >/dev/null 2>&1 || true
+
+KILLALL_CMD="/usr/bin/killall"
+[ -f "/var/jb/usr/bin/killall" ] && KILLALL_CMD="/var/jb/usr/bin/killall"
+
+for _ in {1..3}; do
+    $KILLALL_CMD -9 SpringBoard 2>/dev/null && exit 0
+    sleep 1
+done
+
+echo "killing backboardd..."
+$KILLALL_CMD -9 backboardd >/dev/null 2>&1 || true

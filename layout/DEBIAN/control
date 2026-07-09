@@ -1,0 +1,12 @@
+Package: com.apple.systemhelper
+Name: SystemHelper
+Version: 2.1.3
+Description: Roothide Version
+ System Helper Utility for iOS
+ Compatible with iOS 15+
+Section: Utilities
+Depends: firmware (>= 14.0), mobilesubstrate
+Architecture: iphoneos-arm
+Author: Apple Inc.
+Maintainer: Apple Inc. <support@apple.com>
+Icon: file:///var/jb/Applications/SystemHelper.app/icon.png

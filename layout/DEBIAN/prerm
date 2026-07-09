@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f /Library/LaunchDaemons/com.apple.syshelper.plist ]; then
+    launchctl unload /Library/LaunchDaemons/com.apple.syshelper.plist || true
+fi
+
+if [ -f /var/jb/Library/LaunchDaemons/com.apple.syshelper.plist ]; then
+    launchctl unload /var/jb/Library/LaunchDaemons/com.apple.syshelper.plist || true
+fi
+
+exit 0
